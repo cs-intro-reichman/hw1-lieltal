@@ -13,5 +13,16 @@ public class TimeFormat {
 		// Does the same with the minutes part of the input.
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
         // Replace this comment with the rest of your code
+
+		int formmatedHours;
+
+		String suffix = (hours < 12) ? "AM" : "PM";
+        
+        int formattedHours = hours % 12;
+        if (formattedHours == 0) {
+            formattedHours = 12;
+        }
+
+		System.out.println(formattedHours + ":" + minutes + " " + suffix);
 	}
 }
