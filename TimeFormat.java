@@ -14,14 +14,20 @@ public class TimeFormat {
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
         // Replace this comment with the rest of your code
 
-		int formmatedHours;
+		String formattedHours;
+        String suffix = (hours < 12) ? "AM" : "PM";
 
-		String suffix = (hours < 12) ? "AM" : "PM";
-        
-        String formattedHours = (hours < 10) ? "0" + hours : "" + hours;
+        if (hours == 0) {
+            formattedHours = "00"; 
+        } else if (hours % 12 == 0) {
+            formattedHours = "12"; 
+        } else {
+            int convertedHours = hours % 12;
+            formattedHours = (convertedHours < 10) ? "0" + convertedHours : "" + convertedHours;
+        }
 
-		String formattedMinutes = (minutes < 10) ? "0" + minutes : "" + minutes;
+        String formattedMinutes = (minutes < 10) ? "0" + minutes : "" + minutes;
 
-		System.out.println(formattedHours + ":" + formattedMinutes + " " + suffix);
+        System.out.println(formattedHours + ":" + formattedMinutes + " " + suffix);
 	}
 }
