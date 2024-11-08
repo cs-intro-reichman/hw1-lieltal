@@ -18,12 +18,11 @@ public class TimeFormat {
         String suffix = (hours < 12) ? "AM" : "PM";
 
         if (hours == 0) {
-            formattedHours = "00"; 
+            formattedHours = "0"; 
         } else if (hours % 12 == 0) {
             formattedHours = "12"; 
         } else {
-            int convertedHours = hours % 12;
-            formattedHours = (convertedHours < 10) ? "0" + convertedHours : "" + convertedHours;
+            formattedHours = String.valueOf(hours % 12);
         }
 
         String formattedMinutes = (minutes < 10) ? "0" + minutes : "" + minutes;
