@@ -23,6 +23,8 @@ public class TimeFormat {
             formattedHours = 12;
         }
 
-		System.out.println(formattedHours + ":" + minutes + " " + suffix);
+		String formattedMinutes = (minutes < 10) ? "0" + minutes : "" + minutes;
+
+		System.out.println(formattedHours + ":" + formattedMinutes + " " + suffix);
 	}
 }

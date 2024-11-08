@@ -9,7 +9,7 @@ public class Bill3 {
 		double amountPerDiner = (double)totalBill / 3;
 		double roundedAmountPerDiner = Math.ceil(amountPerDiner);
 
-        System.out.println("Dear " + name1 + ", " + name2 + " and " + name3 + 
+        System.out.println("Dear " + name1 + ", " + name2 + ", and " + name3 + 
 							": pay " + roundedAmountPerDiner +  " Shekels each.");  
 	}
 }
