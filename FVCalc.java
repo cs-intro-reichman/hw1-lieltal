@@ -8,6 +8,6 @@ public class FVCalc {
 		double rate = annualInterestRate / 100 + 1;
 
 		double futureAmount = investedSum * Math.pow(rate, investmentPeriodInYears);
-		System.out.println("After " + investmentPeriodInYears + " years, $" + investedSum + " saved at " + annualInterestRate + "% will yield $" + (int)futureAmount);
+		System.out.println("After " + investmentPeriodInYears + " years, a $" + investedSum + " saved at " + annualInterestRate + "% will yield $" + (int)futureAmount);
 	}
 }
